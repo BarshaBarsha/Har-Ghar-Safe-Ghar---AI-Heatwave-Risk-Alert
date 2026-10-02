@@ -1,0 +1,11 @@
+{
+  "name": "Remix AI-Based Heatwave Health Risk \u0026 Local Alert",
+  "description": "Real-time heatwave health risk estimation, AI/ML classification, local heat alerts, and actionable safety advisories based on ambient temperature and relative humidity.",
+  "requestFramePermissions": [
+    "geolocation",
+    "notifications"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

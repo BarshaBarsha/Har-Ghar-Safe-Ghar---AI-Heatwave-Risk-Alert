@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* 3D Visual Atmosphere Keyframes & Utilities */
+@keyframes sun-spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sun-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.88;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes heat-shimmer {
+  0% {
+    transform: translateY(0) scaleY(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-8px) scaleY(1.04) skewX(1deg);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(-16px) scaleY(1);
+    opacity: 0.35;
+  }
+}
+
+@keyframes severe-heat-wave {
+  0% {
+    transform: translateY(0) skewX(-1.5deg) scaleY(1);
+    filter: blur(0.5px);
+  }
+  50% {
+    transform: translateY(-12px) skewX(2deg) scaleY(1.08);
+    filter: blur(1.5px);
+  }
+  100% {
+    transform: translateY(-24px) skewX(-1.5deg) scaleY(1);
+    filter: blur(0.5px);
+  }
+}
+
+@keyframes fluid-flow {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-25%) translateY(-2px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes conduit-packet {
+  0% {
+    left: 0%;
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+@keyframes float-depth {
+  0%, 100% {
+    transform: translateY(0) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotateX(1deg);
+  }
+}
+
+@keyframes scan-flash {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+}
+
+@keyframes severe-shake {
+  0%, 100% {
+    transform: translateX(0) scale(1);
+  }
+  15%, 45%, 75% {
+    transform: translateX(-5px) rotate(-0.8deg);
+  }
+  30%, 60%, 90% {
+    transform: translateX(5px) rotate(0.8deg);
+  }
+}
+
+.animate-severe-shake {
+  animation: severe-shake 0.75s ease-in-out infinite alternate;
+}
+
+.animate-sun-spin {
+  animation: sun-spin-slow 40s linear infinite;
+}
+
+.animate-sun-pulse {
+  animation: sun-pulse 6s ease-in-out infinite;
+}
+
+.animate-heat-shimmer {
+  animation: heat-shimmer 4s ease-in-out infinite alternate;
+}
+
+.animate-severe-wave {
+  animation: severe-heat-wave 2.5s ease-in-out infinite alternate;
+}
+
+.animate-fluid-wave {
+  animation: fluid-flow 5s ease-in-out infinite;
+}
+
+.animate-float-depth {
+  animation: float-depth 6s ease-in-out infinite;
+}
+
